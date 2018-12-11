@@ -4,6 +4,7 @@ members = [
     "aoc2018",
     "example-day",
     "day1",
-    "day2"
+    "day2",
+    "day3"
 ]
 
