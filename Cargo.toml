@@ -1,7 +1,8 @@
-[dependencies]
+
 [workspace]
 members = [
     "aoc2018",
     "example-day",
+    "day1"
 ]
 
