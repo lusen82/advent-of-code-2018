@@ -5,6 +5,7 @@ members = [
     "example-day",
     "day1",
     "day2",
-    "day3"
+    "day3",
+    "day5"
 ]
 
