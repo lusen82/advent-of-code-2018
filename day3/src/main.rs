@@ -107,7 +107,7 @@ pub fn day_3_b(inp: Input) -> Result<usize, Error> {
             for r in 0..row_int_length {
                 let cc = s_col_int + c;
                 let rr = s_row_int + r;
-                was_zero = was_zero && check_if_empty_matrix(cc as usize, rr as usize, &m);
+                was_zero = was_zero && check_if_empty_matrix(cc as usize, rr as usize, &m)?;
             }
         }
         if was_zero {
@@ -123,13 +123,13 @@ pub fn day_3_b(inp: Input) -> Result<usize, Error> {
     Ok(two_or_more)
 }
 
-fn check_if_empty_matrix(col: usize, row: usize, m: &Matrix) -> bool
+fn check_if_empty_matrix(col: usize, row: usize, m: &Matrix) -> Result<bool, Error>
 {
     let data: &Vec<i32> = &m.data;
     let vector_number  = col % m.cols + (row * m.cols);
     let current_val: &i32 = &data.get(vector_number).unwrap();
-    let i = "1".parse::<i32>().unwrap();
-    return current_val.eq(&i);
+    let i = "1".parse::<i32>()?;
+    return Ok(current_val.eq(&i));
 }
 
 fn update_matrix_for_position(col: usize, row: usize, m: Matrix) -> Matrix

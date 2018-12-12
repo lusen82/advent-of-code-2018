@@ -49,7 +49,6 @@ impl PartialEq for Location {
     }
 }
 
-
 pub fn day_6_a(input: Input) -> Result<usize, Error> {
     let number_of_coordinates = input.len();
     let locations_of_coordinates = get_location_of_coordinates(input);

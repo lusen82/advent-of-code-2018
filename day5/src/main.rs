@@ -54,10 +54,9 @@ pub fn day_5_b() -> Result<(), Error> {
             update_result(&mut result, c);
         }
         if &result.len() - 1 < remaining {
-                             remaining = &result.len() - 1;
-        println!("Numbers remaining for char {} is : {}", &u, (&result.len() - 1));
+            remaining = &result.len() - 1;
+            println!("Numbers remaining for char {} is : {}", &u, (&result.len() - 1));
         }
-
     }
     Ok(())
 }

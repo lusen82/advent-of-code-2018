@@ -44,7 +44,7 @@ fn day_1_b(inp: Input) -> Result<(), Error> {
     let mut mta = 0;
     while not_found {
         for val in inp.iter() {
-            let new_val = mta + val.parse::<i32>().unwrap();
+            let new_val = mta + val.parse::<i32>()?;
             if heard.contains(&new_val) {
                 not_found = false;
                 println!("1.b. answer: {}", &new_val);

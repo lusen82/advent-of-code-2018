@@ -35,9 +35,7 @@ fn solve(input: &mut Input) -> Result<Output, Error> {
 
 fn run() -> Result<(), Error> {
     let mut input = read_input()?;
-
     let output = solve(&mut input)?;
-
     println!("{}", output);
     Ok(())
 }

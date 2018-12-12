@@ -70,11 +70,11 @@ pub fn day_2_b(inp: Input) -> Result<String, Error> {
         }
     }
 
-
     let mut inc_common : String = "".to_string();
     for iter in 0..matching_except_one.0.len() {
-        if matching_except_one.0.chars().nth(iter).unwrap() == matching_except_one.1.chars().nth(iter).unwrap() {
-           inc_common.push(matching_except_one.0.chars().nth(iter).unwrap());
+        let first = matching_except_one.0.chars().nth(iter).unwrap();
+        if first == matching_except_one.1.chars().nth(iter).unwrap() {
+            inc_common.push(first);
         }
     }
 
